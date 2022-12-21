@@ -5,16 +5,15 @@ public class LegoSet {
         Lego jungle = new Lego(10,6,30);
         Lego car = new Lego(12,5,22);
 
-        if((jungle.brick + jungle.cube + jungle.cylinder) > (car.brick + car.cylinder + car.cube)){
+        if((jungle.brick + jungle.cylinder + jungle.cube) > (car.brick + car.cylinder + car.cube)){
             System.out.println("Jungle set has more pieces compared to Car set.");
-            message(jungle.brick + jungle.cube + jungle.cylinder);
+            message(jungle.brick + jungle.cylinder + jungle.cube);
         }else{
             System.out.println("Car set has more pieces compared to Jungle set.");
             message(car.brick + car.cylinder + car.cube);
         }
 
     }
-
     static void message(int sum){
         System.out.println("This lego set has " + sum);
     }
@@ -26,6 +25,6 @@ class Lego{
     Lego(int brick,int cylinder, int cube){
         this.brick = brick;
         this.cylinder = cylinder;
-        this.cube = cylinder;
+        this.cube = cube;
     }
 }
